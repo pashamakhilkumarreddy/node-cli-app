@@ -9,7 +9,7 @@
     "dev": "nodemon --watch 'src/**/*' -e js --exec \"node src/app.js && node\"",
     "build": "node scripts/build/build.js",
     "prod": "node dist/app.js",
-    "prod-pm2": "npm run build && pm2 dist/output.js",
+    "prod-pm2": "pm2 start dist/app.js",
     "debug": "export DEBUG=* && npm run start",
     "lint-md": "eslint --ext .md",
     "lint-md:fix": "eslint --ext .md --fix",
@@ -45,7 +45,8 @@
   },
   "dependencies": {
     "inquirer": "^9.2.10",
-    "nanoid": "^4.0.2"
+    "nanoid": "^4.0.2",
+    "pm2": "^5.3.0"
   },
   "lint-staged": {
     "**/*.js": [
