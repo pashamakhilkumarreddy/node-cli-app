@@ -48,7 +48,7 @@
     "nanoid": "^4.0.2"
   },
   "lint-staged": {
-    "**/*.{js}": [
+    "**/*.js": [
       "npm run lint-js:fix",
       "npm run format"
     ],
